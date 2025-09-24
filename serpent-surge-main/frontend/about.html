@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpent Surge</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <div class="title">Serpent Surge</div>
+    <div id="github-logo">
+        <a href="https://github.com/mt-nix/serpent-surge"><img src="img/github-logo.svg" height="40px"></a>
+    </div>
+    <div class="menu-bar">
+        <a href="index.html" style="background-color: #fe83e6;">Play</a>
+        <a href="scores.html" style="background-color: #fc8404;">High Scores</a>
+        <a href="#" style="background-color: #fe0605;">About</a>
+    </div>
+    <div id="menu-top">
+        About
+    </div>
+    <div class="about">
+        <div id="about-text">
+            Serpent Surge is a demonstration project for the classes of the Nix DevOps course. Candidates should use
+            this project for the practical
+            project part of the workshops. If you are a student, and want to get to the repository of this project,
+            click on the GitHub logo on the
+            top right corner of the screen, or on the following <span style="text-decoration: underline;">
+                <a href="https://github.com/mt-nix/serpent-surge" style="color: #fff;">link</a></span>.
+            <div style="width: 100%; text-align: center; margin-top: 2rem;">
+                &copy; <span id="year"></span> NIX
+            </div>
+        </div>
+    </div>
+    <div class="nixlogo">
+        <a href="https://www.nixsolutions.com/">
+            <img src="https://www.nixsolutions.com/wp-content/themes/nixsite6g/img/logo-sm.svg" height="40px">
+        </a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
+</body>
+
+</html>

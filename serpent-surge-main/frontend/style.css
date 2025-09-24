@@ -1,0 +1,302 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('img/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #dedee0;
+    user-select: none;
+}
+
+.title {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 48px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    user-select: none;
+    text-shadow: 3px 3px 2px #aaaaaa;
+    width: 100%;
+    text-align: center;
+    background-color: #090b18;
+    box-shadow: 0 4px 2px -2px rgba(216, 216, 216, 0.616);
+}
+
+.menu {
+    background-color: #202d7c;
+    border: 10px solid #202d7c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 32px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+.menu #diff-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.menu form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu form .text-input {
+    width: 25%;
+    height: 50px;
+    font-size: 26px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #090b18;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #fe83e6;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+}
+
+.menu form .text-input:focus {
+    outline: none;
+}
+
+
+
+#submit-button {
+    width: 75%;
+    height: 60px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.1s ease;
+    box-shadow: 3px 3px #090b18;
+    background-color: #fe83e6;
+    border: none;
+    border-radius: 3px;
+    color: #dedee0;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+}
+
+#submit-button:active {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+.menu-bar {
+    margin: 16px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #dedee0;
+    font-size: 13px;
+    background-color: #ff8405;
+    width: 160px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    text-align: center;
+    transition: transform 0.2s ease-in;
+    box-shadow: 3px 3px 2px #b9b9b93d;
+    user-select: none;
+}
+
+.menu-bar a:hover {
+    transform: translateY(-2px);
+    transition: transform 0.1s ease-out;
+}
+
+.menu-bar a:active {
+    transform: translateY(2px);
+    transition: transform 0.1s ease-out;
+}
+
+canvas {
+    background-color: #090b18;
+    border: 10px solid #202d7c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#score-bar,
+#menu-top {
+    width: 500px;
+    height: 30px;
+    border: 10px solid #202d7c;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+    font-size: 16px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    background-color: #202d7c;
+}
+
+#menu-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-text {
+    padding-left: 10px
+}
+
+.nixlogo {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    background-color: #ffffffee;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+
+#github-logo {
+    position: absolute;
+    top: 36px;
+    right: 18px;
+}
+
+.about {
+    background-color: #202d7c;
+    border: 10px solid #202d7c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+#about-text {
+    width: 90%;
+    text-align: justify;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#difficulty {
+    width: 75%;
+    height: 60px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.1s ease;
+    box-shadow: 3px 3px #090b18;
+    background-color: #ff8405;
+    border: none;
+    border-radius: 3px;
+    color: #dedee0;
+    text-align: center;
+}
+
+#difficulty:hover {
+    cursor: pointer;
+}
+
+select option {
+    height: 60px;
+    background-color: #ff8405;
+}
+
+.high-scores {
+    border-radius: 5px;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-color: #090b18e5;
+}
+
+
+table {
+    width: 350px;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+td {
+    width: 33%;
+    color: #ff8405;
+    padding-bottom: 5px;
+}
+
+.mid-scr {
+    text-align: left;
+    color: #fff;
+}
+
+.right-scr {
+    text-align: right;
+}
