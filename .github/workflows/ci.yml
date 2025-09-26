@@ -1,0 +1,49 @@
+name: CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  docker-build-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: List directory structure
+      run: ls -la
+      
+    - name: Verify backend structure
+      run: |
+        echo "Backend contents:"
+        ls -la backend/
+        
+    - name: Verify frontend structure  
+      run: |
+        echo "Frontend contents:"
+        ls -la frontend/
+    
+    - name: Build Backend Docker image
+      run: |
+        cd backend
+        docker build -t serpent-surge-backend .
+        
+    - name: Build Frontend Docker image
+      run: |
+        cd frontend
+        docker build -t serpent-surge-frontend .
+        
+    - name: Test Docker Compose configuration
+      run: |
+        if [ -f docker-compose.yaml ]; then
+          docker-compose config
+          echo "✅ Docker compose configuration is valid"
+        else
+          echo "⚠️ docker-compose.yaml not found"
+        fi
+        
+    - name: Success message
+      run: |
+        echo "🎉 All builds completed successfully!"
+        echo "✅ Backend Docker image built"
+        echo "✅ Frontend Docker image built"
+        echo "✅ Repository structure is correct"
