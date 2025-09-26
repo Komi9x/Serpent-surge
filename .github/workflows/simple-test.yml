@@ -1,0 +1,19 @@
+name: Simple Docker Build Test
+
+on: [push, pull_request]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Validate Dockerfiles
+      run: |
+        echo "Checking Dockerfile syntax..."
+        cd backend && docker build -t backend-test . --no-cache
+        cd ../frontend && docker build -t frontend-test . --no-cache
+        
+    - name: Test Docker Compose
+      run: |
+        docker-compose config
