@@ -1,0 +1,19 @@
+name: Simple Build Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build Backend
+      run: |
+        cd backend
+        docker build -t backend .
+        
+    - name: Build Frontend
+      run: |
+        cd frontend
+        docker build -t frontend .
